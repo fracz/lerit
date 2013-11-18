@@ -15,14 +15,14 @@ category_answers(sam, [tak, nie]) :- true.
 category_answers(dzien_tygodnia, [pon_czw, pt, sb, nd]) :- true.
 category_answers(czas_spedzony, [duzo, przecietnie, malo]) :- true.
 
-fact(beer_pub):- answer(sam, nie), possible_ansers(czas_spedzony, [duzo, przecietnie]), possible_ansers(dzien_tygodnia, [pt, sb, nd]).
-fact(fried_meal):-possible_ansers(cena, [przecietnie, tanio]), answer(sam, nie), possible_ansers(czas_spedzony, [duzo, przecietnie]).
-fact(common_dinner):-possible_ansers(cena, [przeciętnie, tanio]), possible_ansers(dzien_tygodnia, [pon_czw, pt]).
+fact(beer_pub):- answer(sam, nie), possible_answers(czas_spedzony, [duzo, przecietnie]), possible_answers(dzien_tygodnia, [pt, sb, nd]).
+fact(fried_meal):-possible_answers(cena, [przecietnie, tanio]), answer(sam, nie), possible_answers(czas_spedzony, [duzo, przecietnie]).
+fact(common_dinner):-possible_answers(cena, [przecietnie, tanio]), possible_answers(dzien_tygodnia, [pon_czw, pt]).
 
 
 
 
-possible_ansers(Category, [Anser | Rest]):- answer(Category, Anser); possible_ansers(Category, Rest).
+possible_answers(Category, [Anser | Rest]):- answer(Category, Anser); possible_answers(Category, Rest).
 
 
 
@@ -67,12 +67,12 @@ clean :-
 
 do :-
 	go_to(X), !,
-	write('Idź do: '), write(X), nl,
+	write('Idz do: '), write(X), nl,
 	clean.
 	
 do :-
 	write('\nNie jestem w stanie odgadnac, '),
-	write('gdzie chcesz iść na lunch.\n\n'),
+	write('gdzie chcesz isc na lunch.\n\n'),
 	clean.
 
  
