@@ -7,7 +7,7 @@ go_to(banoli):-
 	fact(fried_meal); 
 	fact(common_dinner).
 	
-go_to(zacianek):- 
+go_to(zascianek):- 
 	fact(beer_pub).
 
 category_answers(cena, [drogo, przecietne, tanio]) :- true.
@@ -22,7 +22,7 @@ fact(common_dinner):-possible_answers(cena, [przecietnie, tanio]), possible_answ
 
 
 
-possible_answers(Category, [Anser | Rest]):- answer(Category, Anser); possible_answers(Category, Rest).
+possible_answers(Category, [Answer | Rest]):- answer(Category, Answer); possible_answers(Category, Rest).
 
 
 
