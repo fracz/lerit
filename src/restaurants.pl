@@ -6,43 +6,43 @@
 go_to(banoli):- 
 	(fact(fried_meal); 
 	fact(common_dinner)),
-	possible_answers(wczoraj_bylem_w, [zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 	
 go_to(zascianek):- 
 	fact(beer_pub),
-	possible_answers(wczoraj_bylem_w, [banoli, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 	
 go_to(olimp):-
 	fact(pizza),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 	
 go_to(jazzrock):-
 	(fact(party);
 	fact(cold_drinks)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 	
 go_to(jubilat):-
 	(fact(date);
 	fact(business)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, vega, turek_kebab, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, vega, turek_kebab, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 	
 go_to(vega):-
 	(fact(vegetarian);
 	fact(health)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, turek_kebab, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, turek_kebab, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 
 go_to(turek_kebab):-
 	(fact(fast_meal);
 	fact(hot_meal);
 	fact(student)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, taco, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, taco, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 
 go_to(taco):-
 	(fact(foreign_meal);
@@ -50,25 +50,53 @@ go_to(taco):-
 	fact(date);
 	fact(business);
 	fact(common_dinner)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, best_zups, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, best_zups, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 
 go_to(best_zups):-
 	fact(hot_meal),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, grycan, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, grycan, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, grycan, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 
 go_to(grycan):-
 	(fact(cold_drinks);
 	fact(date)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, dominium]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, dominium]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, dominium, bar_mleczny, lemonday, starbucks, mcdonalds]).
 	
 go_to(dominium):-
 	(fact(pizza);
 	fact(business)),
-	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan]),
-	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan]).
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, bar_mleczny, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, bar_mleczny, lemonday, starbucks, mcdonalds]).
+
+go_to(bar_mleczny):-
+	(fact(national_meal);
+	fact(student);
+	fact(fast_meal)),
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, lemonday, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, lemonday, starbucks, mcdonalds]).
+
+go_to(lemonday):-
+	(fact(business);
+	fact(student)),
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, starbucks, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, starbucks, mcdonalds]).
+
+go_to(starbucks):-
+	possible_answers(temperatura, [zimno, przecietnie]),
+	possible_answers(glod, maly),
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, mcdonalds]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, mcdonalds]).
+
+go_to(mcdonalds):-
+	(fact(fast_meal);
+	fact(hot_meal);
+	fact(student);
+	fact(cold_drinks);
+	fact(fried_meal)),
+	possible_answers(wczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks]),
+	possible_answers(przedwczoraj_bylem_w, [banoli, zascianek, olimp, jazzrock, jubilat, vega, turek_kebab, taco, best_zups, grycan, dominium, bar_mleczny, lemonday, starbucks]).
 
 category_answers(cena, [drogo, przecietnie, tanio]) :- true.
 category_answers(sam, [tak, nie]) :- true.
@@ -94,6 +122,7 @@ fact(business):-possible_answers(biznesowe, tak), possible_answers(dzien_tygodni
 fact(party):-possible_answers(dzien_tygodnia, [pt, sb, nd]), possible_answers(sam, nie), possible_answers(nowe_znajomosci, tak), possible_answers(glod, maly).
 fact(hot_meal):-possible_answers(temperatura, zimno), possible_answers(kalorycznosc, duzo).
 fact(foreign_meal):-possible_answers(kuchnia, [chinska, japonska]).
+fact(national_meal):-possible_answers(kuchnia, [polska]).
 fact(pizza):-possible_answers(kalorycznosc, duzo), possible_answers(glod, duzy), possible_answers(nowe_znajomosci, tak).
 fact(health):-possible_answers(kalorycznosc, malo), possible_answers(glow, [przecietny, maly]).
 fact(student):-possible_answers(cena, tanio), possible_answers(sam, tak), possible_answers(kalorycznosc, duzo).
