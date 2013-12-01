@@ -1,4 +1,4 @@
-:- module(se2,[do]).
+:- module(se2,[find, fix]).
 
 :- dynamic([asked/1, answers/2, facts/1]).
 
@@ -173,14 +173,28 @@ clean :-
 	write('\n\nNacisnij enter aby zakonczyc\n'),
 	readln(_).
 
+find :- clean,
+	do.
+
 do :-
 	go_to(X), !,
-	write('Idz do: '), write(X), nl,
-	clean.
-	
+	write('Idz do: '), write(X), nl.
+		
 do :-
 	write('\nNie jestem w stanie odgadnac, '),
-	write('gdzie chcesz isc na lunch.\n\n'),
-	clean.
-
+	write('gdzie chcesz isc na lunch.\n\n').
+	
+fix :-
+	findall(A, asked(A), List), 
+ 	write('\n Wybierz odpwiedź którą chcesz zmienić: ['),
+ 	inner_print(List),
+ 	write('] \n'),
+ 	readln([Question]),
+ 	removeQuestion(Question),
+ 	do.	
  
+ removeQuestion(Question) :- 
+ 	retract(asked(Question)),
+ 	retract(answers(Question, _)),
+ 	retractall(facts(_)).
+ 	
