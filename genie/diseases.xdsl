@@ -4,29 +4,143 @@
 		<cpt id="Node1">
 			<state id="Grypa" />
 			<state id="Angina" />
-			<probabilities>0.5 0.5</probabilities>
+			<state id="Zapalenie_pluc" />
+			<state id="Zapalenie_stawow" />
+			<state id="Zapalenie_gardla" />
+			<state id="Zapalenie_opon_mozgowo_rdzeniowych" />
+			<state id="Bialaczka" />
+			<probabilities>0.3 0.1 0.15 0.05 0.25 0.05 0.1</probabilities>
 		</cpt>
 		<cpt id="Node2">
-			<state id="s36_6" />
-			<state id="s37" />
-			<state id="s37_5" />
-			<state id="s38" />
-			<state id="s39" />
-			<state id="s40" />
+			<state id="ponizej36" />
+			<state id="do37" />
+			<state id="ponad37" />
+			<state id="ponad39" />
 			<parents>Node1</parents>
-			<probabilities>0 0.06666666666666667 0.1333333333333333 0.2 0.2666666666666667 0.3333333333333333 0 0.1666666666666667 0.1666666666666667 0.3333333333333333 0.1666666666666667 0.1666666666666667</probabilities>
+			<probabilities>0.3 0 0.5 0.2 0 0 0.1 0.9 0.1 0 0.4 0.5 0.15 0.1 0.7 0.05 0.3 0.45 0.2 0.05 0.3 0.1 0.3 0.3 0.2 0.2 0.4 0.2000000000000001</probabilities>
 		</cpt>
 		<cpt id="Gardlo">
 			<state id="boli" />
 			<state id="nieboli" />
 			<parents>Node1</parents>
-			<probabilities>0.7 0.3 0.9 0.1</probabilities>
+			<probabilities>0.6 0.4 0.8 0.2 0.6 0.4 0.1 0.9 0.9 0.09999999999999998 0.05 0.95 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Kaszel">
+			<state id="jest" />
+			<state id="nie_ma" />
+			<parents>Node1</parents>
+			<probabilities>0.7 0.3 0.05 0.95 0.8 0.2 0.05 0.95 0.9 0.09999999999999998 0.05 0.95 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Samopoczucie">
+			<state id="dobre" />
+			<state id="zle" />
+			<parents>Node2</parents>
+			<probabilities>0.1 0.9 0.9 0.09999999999999998 0.5 0.5 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Bol_stawow">
+			<state id="jest" />
+			<state id="niema" />
+			<parents>Node1</parents>
+			<probabilities>0.7 0.3 0.05 0.95 0.1 0.9 0.9 0.09999999999999998 0.05 0.95 0.05 0.95 0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="B_l_glowy">
+			<state id="boli" />
+			<state id="nieboli" />
+			<parents>Node1</parents>
+			<probabilities>0.6 0.4 0.4 0.6 0.6 0.4 0.15 0.85 0.4 0.6 0.9 0.09999999999999998 0.15 0.85</probabilities>
+		</cpt>
+		<cpt id="Node7">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>B_l_glowy</parents>
+			<probabilities>0.9 0.09999999999999998 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Zaburzenia_r_wnowagi">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>B_l_glowy</parents>
+			<probabilities>0.7 0.3 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Node9">
+			<state id="brak" />
+			<state id="srednia" />
+			<state id="znaczna" />
+			<parents>Node1</parents>
+			<probabilities>0.2 0.6000000000000001 0.2 0.15 0.45 0.4 0.05 0.35 0.6 0.7 0.2500000000000001 0.05 0.05 0.35 0.6 0.1 0.3 0.6 0.2 0.4 0.4</probabilities>
+		</cpt>
+		<cpt id="B_l_brzucha">
+			<state id="boli" />
+			<state id="nieboli" />
+			<parents>Node1</parents>
+			<probabilities>0.2 0.8 0.2 0.8 0.2 0.8 0.15 0.85 0.2 0.8 0.25 0.75 0.3 0.7</probabilities>
+		</cpt>
+		<cpt id="Apetyt">
+			<state id="jest" />
+			<state id="niema" />
+			<parents>B_l_brzucha</parents>
+			<probabilities>0.05 0.95 0.2 0.8</probabilities>
+		</cpt>
+		<cpt id="Sztywnosc_karku">
+			<state id="brak" />
+			<state id="srednia" />
+			<state id="znaczna" />
+			<parents>Node1</parents>
+			<probabilities>0.6 0.35 0.05 0.2 0.7000000000000001 0.1 0.6 0.35 0.05 0.1 0.5 0.4 0.5 0.4 0.1 0.05 0.25 0.7 0.6 0.3 0.1</probabilities>
+		</cpt>
+		<cpt id="Chrypka">
+			<state id="jest" />
+			<state id="niema" />
+			<parents>Gardlo</parents>
+			<probabilities>0.7 0.3 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Afty">
+			<state id="sa" />
+			<state id="niema" />
+			<parents>Node1</parents>
+			<probabilities>0.6 0.4 0.05 0.95 0.3 0.7 0.6 0.4 0.5 0.5 0.2 0.8 0.6 0.4</probabilities>
+		</cpt>
+		<cpt id="B_l_miesni">
+			<state id="jest" />
+			<state id="niema" />
+			<parents>Node1</parents>
+			<probabilities>0.8 0.2 0.05 0.95 0.7 0.3 0.5 0.5 0.15 0.85 0.2 0.8 0.7 0.3</probabilities>
+		</cpt>
+		<cpt id="Trudnosci_w_chodzeniu">
+			<state id="sa" />
+			<state id="niema" />
+			<parents>B_l_miesni</parents>
+			<probabilities>0.7 0.3 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Problemy_z_wstaniem_z_lozka">
+			<state id="jest" />
+			<state id="nie" />
+			<parents>Bol_stawow</parents>
+			<probabilities>0.7 0.3 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Bladosc">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>Node1</parents>
+			<probabilities>0.2 0.8 0.03 0.97 0.3 0.7 0.6 0.4 0.03 0.97 0.03 0.97 0.95 0.05000000000000004</probabilities>
+		</cpt>
+		<cpt id="Objawy_osluchowe">
+			<state id="brak" />
+			<state id="szczatkowe" />
+			<state id="nasilone" />
+			<parents>Node1</parents>
+			<probabilities>0.95 0.05 0 0.95 0.05 0 0.1 0.1 0.8 0.7 0.25 0.05 0.85 0.1 0.05 0.9 0.1 0 0.7 0.3 0</probabilities>
+		</cpt>
+		<cpt id="Odkrztuszanie_wydzieliny">
+			<state id="jest" />
+			<state id="niema" />
+			<parents>Kaszel</parents>
+			<probabilities>0.8 0.2 0.5 0.5</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
 		<genie version="1.0" app="GeNIe 2.0.5079.0" name="Network1" faultnameformat="nodestate">
 			<node id="Node1">
-				<name>CHoroba</name>
+				<name>Choroba</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
@@ -37,14 +151,140 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>340 330 413 377</position>
+				<position>357 347 430 394</position>
 			</node>
 			<node id="Gardlo">
-				<name>Gardlo</name>
+				<name>Ból gardla</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>502 324 551 354</position>
+				<position>527 301 606 343</position>
+			</node>
+			<node id="Kaszel">
+				<name>Kaszel</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>177 139 248 181</position>
+			</node>
+			<node id="Samopoczucie">
+				<name>Samopoczucie</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>310 469 392 520</position>
+			</node>
+			<node id="Bol_stawow">
+				<name>Bol stawow</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>760 217 831 261</position>
+			</node>
+			<node id="B_l_glowy">
+				<name>Ból glowy</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>455 407 517 445</position>
+			</node>
+			<node id="Node7">
+				<name>Zaburzenia widzenia</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>590 456 670 506</position>
+			</node>
+			<node id="Zaburzenia_r_wnowagi">
+				<name>Zaburzenia równowagi</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>421 488 503 539</position>
+			</node>
+			<node id="Node9">
+				<name>Dusznosc</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>139 56 208 99</position>
+			</node>
+			<node id="B_l_brzucha">
+				<name>Ból brzucha</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>575 166 646 210</position>
+			</node>
+			<node id="Apetyt">
+				<name>Apetyt</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>758 136 807 166</position>
+			</node>
+			<node id="Sztywnosc_karku">
+				<name>Sztywnosc karku</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>299 38 394 97</position>
+			</node>
+			<node id="Chrypka">
+				<name>Chrypka</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>700 325 756 360</position>
+			</node>
+			<node id="Afty">
+				<name>Afty lub/i opryszczka</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>237 355 319 406</position>
+			</node>
+			<node id="B_l_miesni">
+				<name>Ból miesni</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>445 121 507 159</position>
+			</node>
+			<node id="Trudnosci_w_chodzeniu">
+				<name>Trudnosci w chodzeniu</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>563 53 658 112</position>
+			</node>
+			<node id="Problemy_z_wstaniem_z_lozka">
+				<name>Problemy z wstaniem z lozka</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>835 305 933 366</position>
+			</node>
+			<node id="Bladosc">
+				<name>Bladosc</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>134 215 188 248</position>
+			</node>
+			<node id="Objawy_osluchowe">
+				<name>Objawy osluchowe</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>126 283 230 348</position>
+			</node>
+			<node id="Odkrztuszanie_wydzieliny">
+				<name>Odkrztuszanie wydzieliny</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>29 133 122 191</position>
 			</node>
 		</genie>
 	</extensions>
