@@ -117,7 +117,7 @@
 			<parents>Bol_stawow Zaburzenia_r_wnowagi</parents>
 			<probabilities>0.9 0.09999999999999998 0.7 0.3 0.7 0.3 0.2 0.8</probabilities>
 		</cpt>
-		<cpt id="Bladosc">
+		<cpt id="Anemia">
 			<state id="tak" />
 			<state id="nie" />
 			<parents>Node1</parents>
@@ -135,6 +135,24 @@
 			<state id="niema" />
 			<parents>Kaszel</parents>
 			<probabilities>0.8 0.2 0.5 0.5</probabilities>
+		</cpt>
+		<cpt id="Bladosc">
+			<state id="tak" />
+			<state id="nie" />
+			<parents>Anemia</parents>
+			<probabilities>0.9 0.09999999999999998 0.1 0.9</probabilities>
+		</cpt>
+		<cpt id="Podraznienie_gardla">
+			<state id="jest" />
+			<state id="niema" />
+			<parents>Kaszel</parents>
+			<probabilities>0.8 0.2 0.4 0.6</probabilities>
+		</cpt>
+		<cpt id="Upadki">
+			<state id="wystepuja" />
+			<state id="brak" />
+			<parents>Bol_stawow Zaburzenia_r_wnowagi</parents>
+			<probabilities>0.9 0.09999999999999998 0.5 0.5 0.6 0.4 0.1 0.9</probabilities>
 		</cpt>
 	</nodes>
 	<extensions>
@@ -165,7 +183,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>177 139 248 181</position>
+				<position>181 148 252 190</position>
 			</node>
 			<node id="Samopoczucie">
 				<name>Samopoczucie</name>
@@ -179,7 +197,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>548 131 619 175</position>
+				<position>566 127 637 171</position>
 			</node>
 			<node id="B_l_glowy">
 				<name>Ból glowy</name>
@@ -200,7 +218,7 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>583 355 665 406</position>
+				<position>643 359 725 410</position>
 			</node>
 			<node id="Node9">
 				<name>Dusznosc</name>
@@ -263,28 +281,49 @@
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>525 238 623 299</position>
+				<position>470 243 568 304</position>
 			</node>
-			<node id="Bladosc">
-				<name>Bladosc</name>
+			<node id="Anemia">
+				<name>Anemia</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>244 58 298 91</position>
+				<position>295 113 349 146</position>
 			</node>
 			<node id="Objawy_osluchowe">
 				<name>Objawy osluchowe</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>67 209 171 274</position>
+				<position>149 215 253 280</position>
 			</node>
 			<node id="Odkrztuszanie_wydzieliny">
 				<name>Odkrztuszanie wydzieliny</name>
 				<interior color="e5f6f7" />
 				<outline color="000080" />
 				<font color="000000" name="Arial" size="8" />
-				<position>29 133 122 191</position>
+				<position>45 185 138 243</position>
+			</node>
+			<node id="Bladosc">
+				<name>Bladosc</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>235 32 289 65</position>
+			</node>
+			<node id="Podraznienie_gardla">
+				<name>Podraznienie gardla</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>28 91 132 156</position>
+			</node>
+			<node id="Upadki">
+				<name>Upadki</name>
+				<interior color="e5f6f7" />
+				<outline color="000080" />
+				<font color="000000" name="Arial" size="8" />
+				<position>615 231 664 261</position>
 			</node>
 		</genie>
 	</extensions>
